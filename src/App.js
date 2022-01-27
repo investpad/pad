@@ -1,11 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+import NavigationRoutes from "./components/NavigationRoutes";
+import LayoutWithSidebar from "./components/layout/LayoutWithSidebar";
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <BrowserRouter>
+      <LayoutWithSidebar>
+        <NavigationRoutes />
+      </LayoutWithSidebar>
+    </BrowserRouter>
   );
 }
 
